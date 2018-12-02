@@ -1,0 +1,17 @@
+Version: 0.3.0
+Date: 02.12.2018
+- Made some slightly edited images for displaying in the world and as icon
+
+Version: 0.2.0
+Date: 01.12.2018
+- Added settings to choose how to craft the multi furnaces (own building branch, from Bob's furnaces)
+
+Version: 0.1.0
+Date: 30.11.2018
+- First Release
+- Introduced Electric Multi Furnace (210kW, Crafting Speed: 2, Module Slots: 2)
+- Compatibility with Bobsassemblymachines
+    - Adds Electric Multi Furnace 2 (250kW, Crafting Speed: 3, Module Slots: 4)
+    - Adds Electric Multi Furnace 3 (300kW, Crafting Speed: 4, Module Slots: 5)
+
+
