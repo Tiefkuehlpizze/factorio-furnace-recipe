@@ -1,11 +1,11 @@
 {
   "name": "furnace-recipe",
-  "version": "0.16.1",
+  "version": "0.3.0",
   "factorio_version": "0.16",
   "title": "Furnace Recipe",
   "author": "Pizze",
   "contact": "piz2920+factorio@gmail.com",
-  "homepage": "https://forums.factorio.com/viewforum.php?f=51",
-  "description": "Adds a recipe selector to electric smelting ovens",
+  "homepage": "https://github.com/Tiefkuehlpizze/factorio-furnace-recipe",
+  "description": "Furnaces with configurable recipe for Factorio",
   "dependencies": ["base >= 0.16.0", "? bobassembly >= 0.16.1"]
 }
