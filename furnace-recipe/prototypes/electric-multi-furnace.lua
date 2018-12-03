@@ -214,7 +214,7 @@ entity_multi_furnace = piz_electric_multi_furnace{
     energy_usage = "210kW"
   }
 
-entity_multi_furnace["animation"]["layers"][1]["hr_version"]["filename"] = "__furnace-recipe__/graphics/entity/electric-furnace/hr-electric-multi-furnace-1.png"
+entity_multi_furnace["animation"]["layers"][1]["hr_version"]["filename"] = "__furnace-recipe__/graphics/entity/hr-electric-multi-furnace-1.png"
 entity_multi_furnace["animation"]["layers"][1]["filename"] = "__furnace-recipe__/graphics/entity/electric-multi-furnace-1.png"
 
 data:extend({
