@@ -10,6 +10,7 @@ function piz_electric_multi_furnace(input)
   original.max_health = input.max_health or 150
   original.energy_usage = input.energy_usage or "280kW"
   original.module_slots = input.module_slots or 0
+  original.minable = input.minable
   return original
 end
 
@@ -50,7 +51,8 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
       max_health = 380,
       module_slots = 4,
       crafting_speed = 3,
-      energy_usage = "250kW"
+      energy_usage = "250kW",
+      minable = {mining_time = 1, result = "electric-multi-furnace-2"},
   }
   furnace_level3 = piz_electric_multi_furnace{
       name = "electric-multi-furnace-3",
@@ -60,6 +62,7 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
       module_slots = 5,
       crafting_speed = 4,
       energy_usage = "300kW",
+      minable = {mining_time = 1, result = "electric-multi-furnace-3"},
   }
   
   furnace_level2["animation"]["layers"][1]["hr_version"]["filename"] = "__furnace-recipe__/graphics/entity/hr-electric-multi-furnace-2.png"
@@ -211,7 +214,8 @@ entity_multi_furnace = piz_electric_multi_furnace{
     max_health = 350,
     module_slots = 2,
     crafting_speed = 2,
-    energy_usage = "210kW"
+    energy_usage = "210kW",
+    minable = {mining_time = 1, result = "electric-multi-furnace-1"}
   }
 
 entity_multi_furnace["animation"]["layers"][1]["hr_version"]["filename"] = "__furnace-recipe__/graphics/entity/hr-electric-multi-furnace-1.png"
