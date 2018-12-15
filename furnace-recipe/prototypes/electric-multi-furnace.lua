@@ -130,20 +130,15 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
         enabled = false
       },
     })
-    table.insert(data.raw.technology["advanced-material-processing-3"].effects, {
-      type = "unlock-recipe",
-      recipe = "electric-multi-furnace-2"
-    })
-    table.insert(data.raw.technology["advanced-material-processing-4"].effects, {
-      type = "unlock-recipe",
-      recipe = "electric-multi-furnace-3"
-    })
   end
   -- craft bob's extensions into multi-furnaces
   -- drawback: they can't be upgraded further when
   -- they aren't used as material for the next level
   -- probably not a good experience
-  if settings.startup["furnancerecipe-craft-from-bobs"].value == true then
+  if data.raw.item["electric-furnace-2"]
+        and data.raw.item["electric-furnace-3"]
+        and settings.startup["furnancerecipe-craft-from-bobs"].value == true
+     then
     data:extend({
       {
         type = "recipe",
@@ -172,19 +167,14 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
         enabled = false
       }
     })
-    table.insert(data.raw.technology["advanced-material-processing-3"].effects, {
-      type = "unlock-recipe",
-      recipe = "electric-multi-furnace-2-alt"
-    })
-    table.insert(data.raw.technology["advanced-material-processing-4"].effects, {
-      type = "unlock-recipe",
-      recipe = "electric-multi-furnace-3-alt"
-    })
   end
   -- craft electric-furnance-3 into multi furnance as
   -- final product
-  if settings.startup["furnancerecipe-craft-from-bobs-level3"].value == true 
-      or settings.startup["furnancerecipe-craft-from-bobs"].value == true then
+  if data.raw.item["electric-furnace-3"]
+        and (
+            settings.startup["furnancerecipe-craft-from-bobs-level3"].value == true 
+            or settings.startup["furnancerecipe-craft-from-bobs"].value == true 
+        ) then
     data:extend({
       {
         type = "recipe",
@@ -199,10 +189,6 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
         energy_required = 1,
         enabled = false
       }
-    })
-    table.insert(data.raw.technology["advanced-material-processing-4"].effects, {
-      type = "unlock-recipe",
-      recipe = "electric-multi-furnace-3-alt2"
     })
   end
 end
@@ -223,8 +209,4 @@ entity_multi_furnace["animation"]["layers"][1]["filename"] = "__furnace-recipe__
 
 data:extend({
   entity_multi_furnace
-})
-table.insert(data.raw.technology["advanced-material-processing-2"].effects, {
-    type = "unlock-recipe",
-    recipe = "electric-multi-furnace-1"
 })

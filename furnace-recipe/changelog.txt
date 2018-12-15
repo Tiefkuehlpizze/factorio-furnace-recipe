@@ -1,3 +1,9 @@
+Version: 0.4.0
+Date: 15.12.2018
+- Added technologies to unlock Multi Furnaces
+- Fixed bug where absence of bobassembly caused a crash at startup when enabling multiple levels option in mod settings
+- Improved dependency handling with bobassemby: Enabled option that rely on bobassemly will silently do nothing (the only thing they could do is crashing the game anyways
+
 Version: 0.3.2
 Date: 14.12.2018
 - Fixed wrong item mined
