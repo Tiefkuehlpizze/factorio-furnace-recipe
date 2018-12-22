@@ -1,3 +1,8 @@
+Version: 0.5.1
+Date: 22.12.2018
+- Fixed issue with introduced technologies when the own crafting branch was disabled in Mod Settings
+- Added Migration because of the dynamic technlogies. Otherwise the recipes to craft vanish even though they have been researched (confusing)
+
 Version: 0.5.0
 Date: 15.12.2018
 - Added German translation
