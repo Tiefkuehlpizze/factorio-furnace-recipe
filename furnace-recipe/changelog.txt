@@ -1,3 +1,7 @@
+Version: 1.1.0
+Date: 19.05.2019
+- Fixed wrong count of module slots for tier 2 and 3
+
 Version: 1.0.0
 Date: 24.03.2019
 - Version Bump to 0.17

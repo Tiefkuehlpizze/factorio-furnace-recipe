@@ -9,7 +9,14 @@ function piz_electric_multi_furnace(input)
   original.crafting_speed = input.crafting_speed
   original.max_health = input.max_health or 150
   original.energy_usage = input.energy_usage or "280kW"
+  -- legacy
   original.module_slots = input.module_slots or 0
+  -- legacy end
+  original.module_specification = {
+      module_slots = input.module_slots or 0,
+      module_info_icon_shift = {0, 0.5},
+      module_info_multi_row_initial_height_modifier = -0.3
+  }
   original.minable = input.minable
   return original
 end
@@ -49,7 +56,7 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
       icon = "__furnace-recipe__/graphics/icons/electric-multi-furnace-2.png",
       tint = {r = 0.6, g = 0.2, b = 0.8},
       max_health = 380,
-      module_slots = 4,
+      module_slots = 4, -- legacy
       crafting_speed = 3,
       energy_usage = "250kW",
       minable = {mining_time = 1, result = "electric-multi-furnace-2"},
@@ -59,7 +66,7 @@ if settings.startup["furnancerecipe-add-additional-levels"].value == true then
       icon = "__furnace-recipe__/graphics/icons/electric-multi-furnace-3.png",
       tint = {r = 0.2, g = 0.8, b = 0.2},
       max_health = 400,
-      module_slots = 5,
+      module_slots = 5, -- legacy
       crafting_speed = 4,
       energy_usage = "300kW",
       minable = {mining_time = 1, result = "electric-multi-furnace-3"},
